@@ -37,7 +37,7 @@ class OnboardingScreen extends StatelessWidget {
       backgroudColor: const Color(0xff484B5B),
       introductionList: list,
       onTapSkipButton: () {
-        Navigator.push(
+        Navigator.pushReplacement(
           context,
           MaterialPageRoute(
             builder: (context) => HomeScreen(),

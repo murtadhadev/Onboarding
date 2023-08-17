@@ -19,13 +19,13 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> navigatorOnboarding() async {
-    await Future.delayed(const Duration(seconds: 5));
+    await Future.delayed(const Duration(seconds: 3));
     Navigator.of(context)
         .push(MaterialPageRoute(builder: (context) => OnboardingScreen()));
   }
 
   Future<void> colorchang() async {
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(milliseconds: 500));
     setState(() {
       setColor = !setColor;
     });
@@ -35,7 +35,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AnimatedContainer(
-        duration: const Duration(seconds: 3),
+        duration: const Duration(seconds: 2),
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
